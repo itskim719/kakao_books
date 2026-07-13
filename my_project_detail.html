@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-detail</title>
+    <link rel="stylesheet" href="css/my_project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="total">
+        <div class="headerWidth">
+            <header>
+                <div class="under" id="basic">
+                    <a href="#">회원가입</a>
+                    <a href="#">로그인</a>
+                    <div id="benefit">
+                        <a href="#">회원혜택</a>
+                        <div id="benefitD">
+                            <a href="#">등급혜택</a>
+                            <a href="#">신규회원혜택</a>
+                            <a href="#">제휴혜택</a>
+                        </div>
+                    </div>
+                    <a href="#">주문배송</a>
+                    <a href="#">고객센터</a>
+                </div>
+
+                <div class="lAM">
+                    <a href="my_project.html">
+                        <img src="image/harumungo.png" alt="HARUMUNGO로고" id="logo">
+                    </a> 
+                    <form class="under" id="inputForm" action="#">
+                        <div>    
+                            <select name="userSel" class="userSel">
+                                <option value="userSel" selected>통합검색</option>
+                                <option value="userSel_pj">문고MUNGO</option>
+                                <option value="userSel_pjE">eBook</option>
+                                <option value="userSel_pjS">sam</option>
+                                <option value="userSel_pjH">핫트랙스</option>
+                            </select>
+                            <input type="text" class="userIn" id="userSearch" onkeypress="if (event.keyCode==13) searchBooksBtn()"  placeholder="검색어를 입력하세요">
+                            <button type="submit" class="userBnt" onclick="searchBooksBtn()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                    <div id="Micon">
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                </div>
+
+                <div class="navB">
+                    <nav id="menu">
+                        <ul id="mainNav">
+                            <li><a href="#">상반기결산</a></li>
+                            <li><a href="#">상상>현실</a></li>
+                            <li><a href="#">베스트</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">오늘만특가</a></li>
+                            <li><a href="#">바로펀딩</a></li>
+                            <li><a href="#">신상품</a></li>
+                            <li><a href="#">PICKS</a></li>
+                            <li><a href="#">컬처라운지</a></li>
+                        </ul>
+                    </nav>
+                    <div class="under navBM">
+                        <a href="#">오늘의 미션</a>
+                        <a href="#">할인혜택</a>
+                        <p id="salon">여름, 문학살롱</p>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div>
+            <main class="DmainWidth">
+                <div class="book-container">
+                    <div class="book-cover-section">
+                        <img src="#" alt="도서표지이미지" id="bookDetail-thumbnail">
+                    </div>
+                    <!-- <div class="line"></div> -->
+                    <div class="book-info-section">
+                        <h1 id="book-Dtitle" class="book-Dtitle">로딩중...</h1>
+                        <p id="book-contents" class="book-subtitle"></p>
+                        <div id="book-meta" class="book-meta"></div>
+
+                        <div class="info-table">
+                            <div class="info-box">
+                                <div class="own">소 장</div>
+                                <div>
+                                    <div class="info-label">정가</div>
+                                    <div id="price-original" class="info-value price-original">-원</div>
+
+                                    <div class="info-label">판매가</div>
+                                    <div class="info-value">
+                                        <span id="price-sale" class="price-sale">-원</span>
+                                        <span class="discount-badge">[10%할인]</span>
+                                    </div>
+
+                                    <div class="info-label">배송료</div>
+                                    <div class="info-value" style="color: #888;">무료</div>
+                                </div>
+                            </div>
+                            <div class="info-label">주문수량</div>
+                            <div class="info-label">
+                                <div class="quantity-wrapper">
+                                    <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+                                    <input type="text" id="quantity" class="quantity-input" value="1" readonly>
+                                    <button class="quantity-btn" onclick="changeQuantity(+1)">+</button>
+                                </div>
+                            </div>
+
+                            <div class="total-price-section">
+                                <span class="total-label">합계</span>
+                                <span class="total-amount" id="total-amount">-원</span>
+                            </div>
+
+                            <div class="button-group">
+                                <button class="btn btn-cart">장바구니</button>
+                                <button class="btn btn-buy">바로구매</button>
+                                <button class="btn">선물하기</button>
+                                <button class="btn">보관함+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                <div>
+                    <div>
+                        <ul class="bookInfoList">
+                            <li><a href="#"><p>상품정보</p></a></li>
+                            <li class="bookInfoMenu"><a href="#"><p>리뷰</p></a></li>
+                            <li class="bookInfoMenu"><a href=""><p>교환/반품/품절</p></a></li>
+                        </ul>
+                    </div>
+                    <div id="bookEX">
+                    </div>
+                </div>
+        
+            </main>
+        </div>
+        <div>
+    </div>
+    <div class="footerBg">
+        <footer class="footerWidth">
+            <section class="footerUp">
+                <div class="harumungoInfo">
+                    <h4>고객센터</h4>
+                    <h2>010-0000-0000</h2>
+                    <p>상담가능시간: 평일 09:00 ~ 18:00 / 점심시간: 12:00 ~ 13:00</p>
+                    <p>대표메일: none </p>
+                    <p>대량주문: none </p>
+                </div>
+                <div class="footerUpList">
+                        <div>
+                            <ul class="uplist">
+                                <li><a href="#"><h4>하루문고</h4></a></li>
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">매장안내</a></li>
+                                <li><a href="#">나우드림</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="uplist">
+                                <li><a href="#"><h4>비지니스</h4></a></li>
+                                <li><a href="#">입점문의</a></li>
+                                <li><a href="#">광고안내</a></li>
+                                <li><a href="#">상품관리SCM</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="uplist">
+                                <li><a href="#"><h4>쇼핑도우미</h4></a></li>
+                                <li><a href="#">도서검색</a></li>
+                                <li><a href="#">회원등급혜택</a></li>
+                                <li><a href="#">주문/배송</a></li>
+                                <li><a href="#">취소/교환/환불</a></li>
+                                <li><a href="#">적립금 사용</a></li>
+                                <li><a href="#">교환권 사용</a></li>
+                                <li><a href="#">청약 철회</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="uplist">
+                                <li><a href="#"><h4>고객센터</h4></a></li>
+                                <li><a href="#">1:1고객상담</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </div>
+
+                </div>    
+            </section>
+            <section class="footerUnder">
+                <div>
+                    <img src="image/harumungo.png" alt="harumungo" width="180px">
+                </div>
+                <div class="footerUnderGroup">
+                    <ul class="footerUnderInfo" id="footerUnderInfoList">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">영상정보관리방침</a></li>
+                        <li><a href="#">청소년보호정책</a></li>
+                        <li><a href="#">이메일 무단수집거부</a></li>
+                    </ul>
+                    <div class="footerUnderInfo footerInfoP">
+                        <p>(주)하루문고</p>
+                        <p>주소 서울특별시</p>
+                        <p>대표이사</p>
+                    </div>
+                    <div class="footerUnderInfo footerInfoP">
+                        <p>사업자등록번호</p>
+                        <p>통신판매등록번호</p>
+                        <p>개인정보관리 책임자</p>
+                    </div>
+                    <div>
+                        COPYRIGHT ©
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+
+    <script src="js/script_project_detail.js"></script>
+</body>
+</html>

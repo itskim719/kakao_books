@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.total{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.headerWidth, .mainWidth, .footerWidth {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; 
+    margin: 0 122px;
+}
+.under a {
+    text-decoration: none;
+    color: black;
+}
+
+#basic { 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    height: 50px;
+    background-color: #E5E5E5;
+}
+
+#benefitD {
+    display: none;
+    position: absolute;
+}
+#benefit:hover #benefitD {
+    display: flex;
+    flex-direction: column;
+}
+
+.lAM {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    height: 150px;
+    padding-left: 30px;
+}
+
+#logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 20px;
+}
+
+#inputForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.userSel,
+.userIn,
+.userBnt {
+    height: 40px;
+    box-sizing: border-box;
+}
+.userSel {
+    width: 100px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+.userIn {
+    width: 400px;
+}
+.userBnt {
+    width: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+#Micon {
+    margin-left: auto;
+}
+
+.navB {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+}
+.navBM {
+    display: flex;
+    margin-left: auto;
+    gap: 10px;
+}
+#mainNav{
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+#mainNav a {
+    text-decoration: none;
+}
+/* 여기서부터 main=============================================== */
+.mainMTop {
+    display: flex;
+    gap: 38px;
+}
+.mainMUnder {
+    display: flex;
+    justify-content: center;
+}
+.adBox {
+    text-align: center;
+    margin-top: 20px;
+}
+.ad {
+    width: 45%;
+    border-radius: 20px;
+}
+.pic {
+    width: 593px;
+    height: 187px;
+    border-radius: 15px;
+} 
+
+.miniMenu {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 890px;
+    padding: 0;
+    list-style: none;
+    gap: 29px;
+}
+.miniMenu li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+
+}
+.miniMenu li img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+.miniMenu li span {
+    margin-top: 8px;
+    text-align: center;
+    font-size: smaller;
+}
+
+.miniMenu {
+    display: flex;  
+}
+
+.menuGap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.maintitles {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+.smallMenu a + a::before {
+    content: "|";
+    margin: 0 10px;
+    color: #6d6d6d;
+}
+.more {
+    margin-left: auto;
+}
+
+#TRecommandGroup {
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+#todayGroup {
+    position: relative;
+}
+#nextBtn, #prevBtn {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #dbdbdb;
+    border: none;
+}
+#prevBtn {
+    left: -65px;
+}
+#nextBtn {
+    right: -55px;
+}
+.TodayMain {
+    display: flex;
+    gap: 40px;
+}
+.mainbookThumb {
+    width: 180px;
+    height: 250px;
+    border-radius: 15px;
+}
+#TA {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.miniBooks {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 700px;
+    height: 190px;
+}
+.miniBook img {
+    width: 110px;
+    border-radius: 15px;
+}
+.minibook {
+    display: flex;
+    gap: 20px;
+}
+
+#TRecommandGroup.slide {
+    animation: slideRecommend 0.5s ease;
+}
+@keyframes slideRecommend {
+    from {
+        transform: translateX(80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* 책 크기 .book-title, .book-retitle, .book-Atitle */
+.book-title, .book-retitle, .book-Atitle {
+    width: 120px;
+}
+/* 주의! mdCh와 book-title은 한 묶음. 그래서 아래 recommend쪽에도 같은 값을 줘야 mdch와 같은 형태가 된다.  */
+#mdCH {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.recommendWrap {
+    position: relative;
+    width: 1196px;
+    margin: 0 auto;
+}
+
+#recommendPub {
+    display: flex;
+    justify-content: space-between;
+}
+
+#btnBf, #btnAt {
+    position: absolute;
+    top: 30%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #dbdbdb;
+    border: none;
+}
+#btnBf{
+    left: -65px;
+}
+#btnAt {
+    right: -65px;
+}
+
+
+.aiPart {
+    display: flex;
+    gap: 90px;
+}
+
+#aiRF {
+    display: flex;
+    justify-content: space-between;
+    width: 252px;
+    height: 79px;
+}
+
+#aiRFText{
+    width: 252px;
+    height: 109px;
+}
+
+#aiRFList {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+
+}
+
+
+.book-Athumbnail, .book-reThumbnail, .book-thumbnail { 
+    border-radius: 20px;
+    width: 150px;
+}
+
+#loginRecommend { 
+    border: 3px solid blueviolet;
+    border-radius: 20px;
+    width: 216px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bestList-box {
+    width: 137px;
+    height: 429px;
+}
+#best {
+    display: flex;
+    justify-content: space-between;
+}
+#bestList ul{
+    list-style: none;
+}
+#bestSection, #bestListBook{
+    display: flex;
+    
+}
+#bestSection{
+    gap: 200px;
+}
+#bestListBook{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 70px;
+    flex: 1;
+}
+
+
+
+/* 여기서부터 footer--------------------------------------------- */
+.footerBg {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ebebeb;
+}
+.footerWidth {
+    width: 1196px;
+    margin: 0 auto;
+}
+.footerUp, .footerUpList {
+    display: flex;
+}
+.footerUp {
+    margin-top: 50px;
+}
+.harumungoInfo, .footerUpList{
+    flex: 1;
+}
+.footerUpList{
+    justify-content: space-between;
+}
+.uplist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+.uplist a {
+    text-decoration: none;
+}
+
+.footerUnder, .footerUnderInfo{
+    display: flex;
+}
+#footerUnderInfoList {
+    list-style: none;
+}
+#footerUnderInfoList a {
+    font-weight: bold;
+}
+#footerUnderInfoList li + li::before {
+    content: "|";
+    margin: 0 10px;
+    color: #6d6d6d;
+}
+
+.footerInfoP p + p::before {
+    content: "|";
+    margin: 0 10px;
+    color: #6d6d6d;
+}
+.footerUnderGroup, .footerUnderInfo {
+    flex: 1;
+}
+.footerUnderGroup { 
+    display: grid;
+    margin-left: 50px;
+}
+#footerlogo {
+    border-radius: 20px;
+}
+/* 여기서부터 상세페이지(detail) ================================*/
+
+.DmainWidth { 
+    margin: 0 122px;
+}
+
+.book-container{
+    border: 7px double rgb(180, 180, 180);
+    border-radius: 40px;
+    display: flex;
+    padding: 70px 100px;
+}
+/* .line {
+    width: 2px;
+    height: 100px;
+    background-color: rgb(190, 190, 190);
+    margin: 0 30px;
+} */
+.book-cover-section {
+    padding-right: 30px;
+}
+.book-info-section, .info-table {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.book-info-section {
+    border-left: 3px solid rgb(218, 218, 218);
+    padding-left: 30px;
+}
+
+.book-Dtitle {
+    width: 465px;
+    padding: 5px;
+    border-bottom: 3px dashed rgb(206, 206, 206);
+}
+
+.info-box {
+    display: flex;
+    gap: 30px;
+}
+.own {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+    padding: 20px;
+}
+
+.quantity-wrapper {
+    display: flex;
+    gap: 10px;
+    width: 165px;
+    height: 25px;
+}
+.quantity-input {
+    border-radius: 10px;
+    border: none;
+}
+.quantity-btn {
+    width: 30px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: none;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    width: 465px;
+    height: 100px;
+    gap: 30px;
+}
+.btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    border: none;
+}
+.btn-cart {
+    background-color: rgb(255, 173, 173);
+}
+.btn-buy {
+    background-color: rgb(133, 226, 255);
+}
+
+.total-price-section {
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: end;
+}
+
+.bookInfoList{
+    display: flex;
+    list-style: none;
+    padding: 50px;
+    gap: 50px;
+}
+.bookInfoMenu{
+    border-left: 2px solid  #b8b8b8;
+    padding-left: 45px;
+}
+.bookInfoList a{
+    text-decoration: none;
+}
+
+#bookEX {
+    border: 1px solid #b8b8b8;
+    height: 500px;
+    border-radius: 15px;
+}
+#bookIntr, #authorsBox {
+    padding: 50px;
+}
+.namePadding, #authorInfo, #book-summary {
+    padding: 10px 20px;
+}
+
+/* 검색========================= */
+/* 나중에....ㅠㅠ.... */
+.book-cardS {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

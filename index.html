@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY</title>
+    <link rel="stylesheet" href="css/my_project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="total">
+        <div class="headerWidth">
+            <header>
+                <div class="under" id="basic">
+                    <a href="#">회원가입</a>
+                    <a href="#">로그인</a>
+                    <div id="benefit">
+                        <a href="#">회원혜택</a>
+                        <div id="benefitD">
+                            <a href="#">등급혜택</a>
+                            <a href="#">신규회원혜택</a>
+                            <a href="#">제휴혜택</a>
+                        </div>
+                    </div>
+                    <a href="#">주문배송</a>
+                    <a href="#">고객센터</a>
+                </div>
+
+                <div class="lAM">
+                    <a href="my_project.html">
+                        <img src="image/harumungo.png" alt="HARUMUNGO로고" id="logo">
+                    </a> 
+                    <form class="under" id="inputForm" action="#">
+                        <div>    
+                            <select name="userSel" class="userSel">
+                                <option value="userSel" selected>통합검색</option>
+                                <option value="userSel_pj">HARUMUNGO</option>
+                                <option value="userSel_pjE">eBook</option>
+                                <option value="userSel_pjS">sam</option>
+                                <option value="userSel_pjH">핫트랙스</option>
+                            </select>
+                            <input type="text" class="userIn" id="userSearch" onkeypress="if (event.keyCode==13) searchBooksBtn()"  placeholder="검색어를 입력하세요">
+                            <button type="submit" class="userBnt" onclick="searchBooksBtn()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                    <div id="Micon">
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                </div>
+
+                <div class="navB">
+                    <nav id="menu">
+                        <ul id="mainNav">
+                            <li><a href="#">상반기결산</a></li>
+                            <li><a href="#">상상>현실</a></li>
+                            <li><a href="#">베스트</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">오늘만특가</a></li>
+                            <li><a href="#">바로펀딩</a></li>
+                            <li><a href="#">신상품</a></li>
+                            <li><a href="#">PICKS</a></li>
+                            <li><a href="#">컬처라운지</a></li>
+                        </ul>
+                    </nav>
+                    <div class="under navBM">
+                        <a href="#">오늘의 미션</a>
+                        <a href="#">할인혜택</a>
+                        <a id="salon">여름, 문학살롱</a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <main>
+            <div class="mainWidth" id="searchBList">
+                <section class="mainMTop">
+                    <div class="adBox">
+                        <img src="image/광고.png" alt="광고" class="ad">
+                    </div>
+                </section>
+                <section class="mainMUnder">
+                    <div>
+                        <ul class="miniMenu">
+                            <li><a href="#"><img src="image/nm출석체크 .png" alt=""><span>출석체크</span></img></a></li>
+                            <li><a href="#"><img src="image/nm이벤트.png" alt=""><span>이벤트</span></img></a></li>
+                            <li><a href="#"><img src="image/nm매장안내.png" alt=""><span>매장안내</span></img></a></li>
+                            <li><a href="#"><img src="image/nm마이페이지.png" alt=""><span>마이페이지</span></img></a></li>
+                            <li><a href="#"><img src="image/nm내서재.png" alt=""><span>내서재</span></img></a></li>
+                            <li><a href="#"><img src="image/nm장바구니.png" alt=""><span>장바구니</span></img></a></li>
+                            <li><a href="#"><img src="image/nm설정.png" alt=""><span>설정</span></img></a></li>
+                        </ul>
+                    </div>
+
+                </section>
+
+                <section>  
+                    <div class="under maintitles">
+                        <h3>오늘의 선택</h3>
+                        <div class="smallMenu">
+                            <a href="#">국내도서</a>
+                            <a href="#" >외국도서</a>
+                            <a href="#">eBook</a>
+                            <a href="#">sam</a>
+                            <a href="#">핫트랙스</a>
+                            <a href="#">only</a>
+                        </div>
+                        <a href="#" class="more"><span>더보기+</span></a>
+                    </div>
+
+                    <div id="todayGroup">
+                        <!-- script_project_Today.js -->
+                        <button id="prevBtn">◁</button>
+                        <div class="under" id="TRecommandBook"></div>
+                        <button id="nextBtn">▷</button>
+                    </div>
+                </section>
+
+                <section>
+                     <div>
+                        <img src="image/rest.png" alt="rest" class="pic">
+                        <img src="image/bookroad.png" alt="bookroad" class="pic">
+                    </div>
+                </section>
+
+                <section class="menuGap">  
+                    <div class="under maintitles">
+                        <h3>MD들이 신중하게 골랐어요</h3>
+                        <div class="smallMenu">
+                            <a href="#">국내도서</a>
+                            <a href="#">외국도서</a>
+                            <a href="#">eBook</a>
+                            <a href="#">sam</a>
+                            <a href="#">핫트랙스</a>
+                        </div>
+                        <a href="#" class="more"><span>더보기+</span></a>
+                    </div>
+                    <div class="under" id="mdCH">
+                        <!-- script_project.js -->
+                    </div>
+                    
+                </section>
+                <section class="recommendWrap">
+                    <button id="btnBf">◁</button>
+                    <div class="recommendSection menuGap">
+                        <h3>출판사에서 자신있게 추천해요</h3>
+                        
+                        <div class="pub">
+                            <div id="recommendPub">
+                                <!-- script_projuct_button.js -->
+                            </div>
+                        </div>
+                    </div>
+                    <button id="btnAt">▷</button>
+                </section>
+                <section class="aiPart">
+                    <div>
+                        <div class="under">
+                            <div id="aiRF">
+                                <div>
+                                    <h2 style="color: rgb(70, 223, 70);">AI추천</h2>
+                                    <h2 style="color: rgb(6, 99, 6);"><b>PICKs</b><h2>
+                                </div>
+                                <div>
+                                    <a href="#">더보기+</a>
+                                </div>
+                            </div>
+                            <div id="aiRFText">
+                                <p>발견의 기쁨을 선물합니다.</p>
+                                <p>취향을 분석해 꼭 맞는 책을 추천해드릴게요!</p>
+                            </div>
+                        </div>
+                        <div class="under" id="loginRecommend">
+                            <a href="#">로그인하고 더 많은 추천 받기</a>
+                        </div>
+                    </div> 
+                    <div id="aiRFList">
+                        <!-- script_project_1.js -->
+                    </div>
+                </section>
+                <section class="under" id="bestSection">
+                    <div id="bestList-box">
+                        <div>
+                            <div id="best">
+                                <h3>베스트</h3>
+                                <a href="#">더보기+</a>
+                            </div> 
+                        </div>
+                        <div id="bestList">
+                            <ul>
+                                <li><a href="#"><b>전체</b></a></li>
+                                <li><a href="#">국내도서</a></li>
+                                <li><a href="#">외국도서</a></li>
+                                <li><a href="#">eBook</a></li>
+                                <li><a href="#">sam</a></li>
+                                <li><a href="#">핫트랙스</a></li>
+                                <li><a href="#">Haru</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#"><b>스테디셀러</b></a></li>
+                                <li><a href="#">국내도서</a></li>
+                                <li><a href="#">외국도서</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="bestListBook">
+                        <!-- script_project.js -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <div class="footerBg">
+        <footer class="footerWidth">
+            <section class="footerUp">
+                <div class="harumungoInfo">
+                    <h4>고객센터</h4>
+                    <h2>010-0000-0000</h2>
+                    <p>상담가능시간: 평일 09:00 ~ 18:00 / 점심시간: 12:00 ~ 13:00</p>
+                    <p>대표메일: none </p>
+                    <p>대량주문: none </p>
+                </div>
+                <div class="footerUpList">
+                        <div>
+                            <ul class="uplist">
+                                <li><a href="#"><h4>하루문고</h4></a></li>
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">매장안내</a></li>
+                                <li><a href="#">나우드림</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="uplist">
+                                <li><a href="#"><h4>비지니스</h4></a></li>
+                                <li><a href="#">입점문의</a></li>
+                                <li><a href="#">광고안내</a></li>
+                                <li><a href="#">상품관리SCM</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="uplist">
+                                <li><a href="#"><h4>쇼핑도우미</h4></a></li>
+                                <li><a href="#">도서검색</a></li>
+                                <li><a href="#">회원등급혜택</a></li>
+                                <li><a href="#">주문/배송</a></li>
+                                <li><a href="#">취소/교환/환불</a></li>
+                                <li><a href="#">적립금 사용</a></li>
+                                <li><a href="#">교환권 사용</a></li>
+                                <li><a href="#">청약 철회</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="uplist">
+                                <li><a href="#"><h4>고객센터</h4></a></li>
+                                <li><a href="#">1:1고객상담</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </div>
+
+                </div>    
+            </section>
+            <section class="footerUnder">
+                <div>
+                    <img src="image/harumungo.png" alt="harumungo" id="footerlogo" width="180px">
+                </div>
+                <div class="footerUnderGroup">
+                    <ul class="footerUnderInfo" id="footerUnderInfoList">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">영상정보관리방침</a></li>
+                        <li><a href="#">청소년보호정책</a></li>
+                        <li><a href="#">이메일 무단수집거부</a></li>
+                    </ul>
+                    <div class="footerUnderInfo footerInfoP">
+                        <p>(주)하루문고</p>
+                        <p>주소 서울특별시</p>
+                        <p>대표이사</p>
+                    </div>
+                    <div class="footerUnderInfo footerInfoP">
+                        <p>사업자등록번호</p>
+                        <p>통신판매등록번호</p>
+                        <p>개인정보관리 책임자</p>
+                    </div>
+                    <div>
+                        COPYRIGHT ©
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <script src="js/script_project.js"></script>
+    <script src="js/script_project_Today.js"></script>
+    <script src="js/script_project_button.js"></script>
+    <script src="js/script_project_1.js"></script>
+    <script src="js/script_search_search.js"></script>
+    <script src="js/script_project_detail.js"></script>
+    <!-- <script src="script_project_search.js"></script> -->
+    
+
+</body>
+</html>
+
+
+
